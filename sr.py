@@ -10,6 +10,7 @@ while base < total:
         if f in acked:
             continue
         print("Sent frame", f)
+        
         if f in lost:
             lost.remove(f)
             print(f"Frame {f} lost -> NAK {f}, resend only this one")
